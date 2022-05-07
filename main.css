@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-gray);
+}
+main {
+  display: grid;
+  width: 40rem;
+  height: 30rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "first-sec first-sec"
+    "second-sec third-sec";
+}
+.first-sec {
+  grid-area: first-sec;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+}
+#first-h1 {
+  color: var(--primary-cyan);
+  font-size: 1.5rem;
+}
+#first-h2 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--primary-bright-yellow);
+}
+#first-p {
+  margin-top: 1rem;
+  color: var(--grayish-blue);
+}
+.second-sec {
+  padding: 2.5rem;
+  grid-area: second-sec;
+  background: var(--primary-cyan);
+  color: white;
+  border-bottom-left-radius: 8px;
+}
+#second-h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.bonus-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.price {
+  display: inline-block;
+  color: var(--light-gray);
+}
+#figure {
+  display: inline-block;
+  margin-right: 7px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.signup-btn {
+  background: var(--primary-bright-yellow);
+  width: 15rem;
+  height: 3rem;
+  margin-top: 2.2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+.third-sec {
+  grid-area: third-sec;
+  height: 100%;
+  background: var(--grayish-blue);
+  border-bottom-right-radius: 8px;
+  padding: 2.5rem;
+}
+#third-h2{
+  color: white;
+  font-size: 1.1rem;
+}
+#third-p{
+  color: var(--light-gray);
+  margin-top: 1.2rem;
+  padding-right: 3rem;
+  line-height: 1.2rem;
+}
+@media screen and (max-width: 680px) {
+body{
+  height: 100%;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ align-items: center;
+
+ width: 90%;
+ height: 100%;
+ margin-top: 5rem;
+}
+.mobile-box{
+  width: 92%;
+  height: 17rem;
+  border-radius: 0;
+padding: 1rem;
+
+
+}
+.second-sec{
+height: 15rem;
+}
+.third-sec{
+height: 15rem;
+}
+#third-p{
+  padding-right: 1rem;
+}
+.signup-btn{
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+}
